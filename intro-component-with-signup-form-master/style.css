@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: var(--red);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--red);
+  background-image: url(/images/bg-intro-desktop.png);
+  color: #fff;
+}
+
+.main-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.intro {
+  max-width: 500px;
+}
+
+.box {
+  background-color: var(--blue);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.214);
+  margin-left: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: #fff;
+  padding: 40px 25px;
+  margin-left: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 10px rgba(0, 0, 0, 0.214);
+  text-align: center;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px var(--grayish-blue) solid;
+  border-radius: 10px;
+}
+
+form div {
+  text-align: right;
+  padding: 10px;
+  position: relative;
+}
+
+form p {
+  color: var(--grayish-blue);
+}
+
+form img {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0;
+}
+
+.error {
+  opacity: 1;
+}
+
+small {
+  color: var(--red);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  padding: 15px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  background-color: var(--green);
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.451);
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--dark-blue);
+}
+
+button:focus {
+  outline: none;
+
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 800px) {
+  .main-cont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .intro {
+    padding: 20px;
+  }
+
+  form {
+    margin: 20px;
+  }
+
+  .box {
+    margin: 20px;
+  }
+}
