@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(217, 12%, 63%);
+  --medium-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main-cont {
+  border-radius: 30px;
+  padding: 20px 50px 50px 20px;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  gap: 50px;
+  max-width: 450px;
+}
+
+.icon {
+  margin-bottom: 20px;
+  background-color: var(--very-dark-blue);
+  padding: 10px;
+  border-radius: 100px;
+}
+
+p {
+  color: var(--light-gray);
+}
+
+.rating {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.rating > button {
+  background-color: var(--very-dark-blue);
+  padding: 10px;
+  width: 40px;
+  border-radius: 100%;
+  color: var(--light-gray);
+  border-style: none;
+  margin: 20px 0px 20px 0px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 100px;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.rating > button:hover {
+  background-color: var(--light-gray);
+  color: white;
+  cursor: pointer;
+}
+
+.rating > button:focus {
+  background-color: var(--orange);
+  color: white;
+}
+
+.sec-cont {
+  text-align: center;
+  text-align: center;
+}
+
+.mob {
+  margin: 40px auto;
+}
+.error {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+small {
+  background-color: var(--very-dark-blue);
+  border-radius: 20px;
+  color: var(--light-gray);
+  padding: 10px;
+
+  color: var(--orange);
+}
+.sec-cont h1 {
+  margin: 20px;
+  text-align: center;
+}
+.sec-cont p {
+  width: 400px;
+  margin: 20px 20px 0px 0px;
+}
+
+.dis {
+  display: none;
+}
