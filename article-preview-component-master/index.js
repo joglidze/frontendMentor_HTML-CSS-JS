@@ -2,7 +2,7 @@ const shareBtn = document.querySelector(".share");
 const mobShare = document.querySelector(".mob-share");
 const shareBlock = document.querySelector(".flex");
 let num = 0;
-l
+
 shareBtn.addEventListener("click", share);
 mobShare.addEventListener("click", share);
 function share() {
