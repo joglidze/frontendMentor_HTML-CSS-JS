@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Libre Franklin", sans-serif;
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+div > small {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+span {
+  color: var(--gray);
+  font-weight: 300;
+}
+div > img {
+  margin: 25px auto;
+}
+
+.img-div {
+  max-width: 600px;
+  margin: auto;
+}
+
+.email {
+  margin-top: 25px;
+  border-radius: 20px;
+
+  padding: 10px;
+  border: 3px solid var(--pale-blue);
+  transition: 0.5s;
+  outline: none;
+  width: 25%;
+}
+
+.email:focus {
+  border: 3px solid #555;
+}
+
+.submit-btn {
+  border-radius: 20px;
+  background-color: var(--blue);
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 10%;
+}
+
+i {
+  border: 1px solid var(--gray);
+  padding: 5px;
+  border-radius: 50px;
+  margin-right: 15px;
+  color: var(--blue);
+  width: 30px;
+  cursor: pointer;
+}
+
+i:hover {
+  border: none;
+  background-color: var(--blue);
+  color: #ffff;
+}
+
+.error {
+  color: var(--light-red);
+  text-align: left;
+  font-style: italic;
+  margin-right: 300px;
+}
+
+.input-error {
+  border: 3px solid var(--light-red);
+}
+.submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 50px;
+  }
+  div > img {
+    margin: 10px auto;
+  }
+
+  .email {
+    width: 100%;
+  }
+  .submit-btn {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .error {
+    color: var(--light-red);
+    text-align: left;
+    font-style: italic;
+    margin-right: 10px;
+    position: relative;
+    bottom: 75px;
+  }
+}
