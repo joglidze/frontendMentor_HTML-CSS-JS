@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --bg-gradient: linear-gradient(
+    180deg,
+    hsl(236, 72%, 79%) 10%,
+    hsl(237, 63%, 64%) 90%
+  );
+  --v-light-grayish: hsl(234, 14%, 74%);
+  --light-grayish: hsl(234, 14%, 74%);
+  --graish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+
+  background-color: hsl(240, 78%, 98%);
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+
+  background-position: right top, left bottom;
+  background-repeat: no-repeat;
+}
+
+
+
+.dis-pricing-blocks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.header {
+  padding: 50px;
+  color: var(--dark-grayish-blue);
+  position: relative;
+}
+
+.header p {
+  color: var(--v-light-grayish);
+}
+.price-block small {
+  color: var(--dark-grayish-blue);
+}
+.price-block {
+  width: 100%;
+  padding: 20px;
+  align-self: center;
+}
+
+
+ul {
+  width: 100%;
+}
+
+.blue-block {
+  background: var(--bg-gradient);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+.blue-block small {
+  color: white;
+}
+
+button {
+  border-width: 1px;
+  background: var(--bg-gradient);
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 15px;  
+  width: 100%;
+  border-radius: 10px;
+}
+
+.blue-block button {
+  background: white;
+  color: transparent;
+}
+
+button p {
+  background: -webkit-linear-gradient(
+    hsl(236, 72%, 79%) 10%,
+    hsl(237, 63%, 64%) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+button:not(.blue-block button):hover{
+    cursor:pointer;
+    
+    color: rgb(3, 3, 3);
+    background: -webkit-linear-gradient(
+        hsl(236, 72%, 79%) 10%,
+        hsl(237, 63%, 64%) 90%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.blue-block button:hover{
+    
+    
+    cursor:pointer;
+    background: -webkit-linear-gradient(
+        hsl(0, 0%, 100%) 100%,
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    
+}
+.slider{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top:7px;
+    left:5px;
+    height: 26px;
+    width: 26px;
+    opacity: 1;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.switch{
+    position: relative;
+    opacity: 1;
+    top:0px;
+    bottom:0;
+    border: solid;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    background: var(--bg-gradient);
+    border: none;
+    margin:0px 20px 0px 20px; 
+}
+
+.switch input{
+    position: absolute;
+    top:2px;
+    left:0px;
+    height: 26px;
+    width: 26px;
+    opacity: 0;
+    text-align: left;
+    transition: 0.4s;
+   
+}
+
+
+input:checked + .slider {
+   transform: translateX(35px);
+   
+}
+
+input:checked {
+    background-color: #2196F3;
+  }
+
+
+
+  .header>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0px 0px;
+  }
+
+
+  @media screen and (max-width:800px) {
+    body{
+        padding:20px;
+    }
+    .dis-pricing-blocks {
+        display: flex;
+        flex-direction: column;
+       
+      }
+      .blue-block{
+        margin:40px;
+      }
+      .price-block{
+        margin-top: 20px;
+      }
+  }
+
+
+.annually{
+    display:block;
+}
+
+.monthly{
+    display: none;
+}
