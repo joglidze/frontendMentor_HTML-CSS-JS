@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --input-gradient: linear-gradient(
+    120deg,
+    hsl(249, 99%, 64%) 0%,
+    hsl(278, 94%, 30%)
+  );
+
+  --error-red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-ciolet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Space Grotesk", sans-serif;
+
+  background: url(./images/bg-main-desktop.png) no-repeat;
+  font-size: 18px;
+}
+
+.main-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+.complete h1 {
+  font-weight: 500;
+}
+
+.complete p {
+  color: var(--dark-grayish-ciolet) !important;
+  font-weight: 500;
+}
+.front-card {
+  position: relative;
+}
+
+.card-info {
+  position: absolute;
+  top: 10px;
+  margin: 20px;
+
+  color: white;
+  font-size: 500;
+}
+
+.card-info h1 {
+  margin: 50px 0px 10px;
+  font-weight: lighter;
+}
+
+.dis-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-back {
+  position: relative;
+  margin: 50px;
+}
+
+.card-back p {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+  color: white;
+}
+
+/*input */
+
+.add-info {
+  width: 400px;
+}
+.exp-date {
+  display: flex;
+}
+
+.exp-date input {
+  width: 50px;
+}
+.CVC {
+  width: 105% !important;
+}
+
+form p {
+  margin: 20px 0px 10px 0px;
+  color: var(--very-dark-violet);
+  font-size: 15px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px !important;
+  border: 1px solid var(--light-grayish-violet);
+  outline: 0;
+}
+
+/*delete ARRoWS*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: var(--light-grayish-violet);
+}
+
+input:focus {
+  border: double 1px transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(white, white), var(--input-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  cursor: pointer;
+}
+
+small {
+  color: var(--error-red);
+}
+
+.card-info h1 {
+  opacity: 1;
+}
+
+.zero {
+  width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background: url(./images/bg-main-mobile.png) no-repeat;
+    background-size: contain;
+  }
+  .main-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .img-cont {
+    position: relative;
+  }
+  .card-front {
+    position: absolute;
+    padding: 70px;
+    top: 100px;
+    right: 50px;
+  }
+
+  .card-back {
+    margin: 20px;
+    position: relative;
+    top: -40px;
+    z-index: -1;
+    padding: 30px;
+  }
+
+  .card-info {
+    position: absolute;
+    top: 90px;
+    margin: 20px 20px -20px;
+    padding: 70px;
+    color: white;
+    font-size: 500;
+    font-size: 14px;
+    width: 400px;
+    right: 100px;
+  }
+  form {
+    margin-top: -20px;
+  }
+  .card-back p {
+    position: absolute;
+    top: 115px;
+    right: 80px;
+    color: white;
+  }
+}
+
+.num-msg {
+  display: none;
+}
+
+.exp-msg {
+  display: none;
+}
+
+.cvc-msg {
+  display: none;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="index.js" defer></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="main-cont">
+      <div class="img-cont">
+        <div class="front-card">
+          <img
+            src="/images/bg-card-front.png"
+            alt="bg-card-front"
+            class="card-front"
+          />
+          <div class="card-info">
+            <img
+              src="/images/card-logo.svg"
+              alt="card-logo"
+              class="card-logo"
+            />
+            <div class="zero">
+              <h1 class="oncardnumber">0000 0000 0000 0000</h1>
+            </div>
+
+            <div class="dis-flex">
+              <p class="nameoncard">JANE APPLESEAND</p>
+              <p>
+                <span class="mmoncard">00</span>/<span class="onCardyy"
+                  >00</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <img
+            src="/images/bg-card-back.png"
+            alt="bg-card-front"
+            class="card-back"
+          />
+          <p class="oncard">000</p>
+        </div>
+      </div>
+      <div class="add-info">
+        <form>
+          <label>
+            <p>CARDHOLDER NAME</p>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed "
+              class="namecard"
+              maxlength="16"
+              required
+            />
+          </label>
+
+          <label>
+            <p>CARDNUMBER</p>
+            <input
+              type="text"
+              placeholder=" e.g. 1234 5678 9123 0000"
+              maxlength="19"
+              id="number"
+            />
+            <small class="num-msg">Wrong format. numbers only</small>
+          </label>
+
+          <div class="exp-date">
+            <label>
+              <p>EXP.DATE(MM/YY)</p>
+              <input
+                type="text"
+                placeholder="MM"
+                class="date mm"
+                maxlength="2"
+                required
+              />
+
+              <input
+                type="text"
+                class="date yyoncard"
+                maxlength="2"
+                placeholder="YY"
+                required
+              />
+              <br />
+              <small class="exp-msg">Can't be blank</small>
+            </label>
+
+            <label>
+              <p>CVC</p>
+              <input
+                type="text"
+                placeholder="e.g. 123"
+                class="CVC cvcnumber"
+                maxlength="3"
+                required
+              />
+              <small class="cvc-msg">Can't be blank</small>
+            </label>
+          </div>
+          <button>Confirm</button>
+        </form>
+        <div class="complete">
+          <img src="/images/icon-complete.svg" alt="icon-complete" />
+          <h1>Thank you</h1>
+          <p>We have added your card details</p>
+          <button>Confirm</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
