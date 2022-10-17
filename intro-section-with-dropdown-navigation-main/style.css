@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --med-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+  overflow: hidden;
+}
+header {
+  margin: 20px;
+  position: relative;
+}
+.dis-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header li {
+  margin: 0px 20px;
+  color: var(--med-gray);
+  cursor: pointer;
+}
+
+.nav-arrow::after {
+  aspect-ratio: 1;
+  background: url(/images/icon-arrow-down.svg) no-repeat;
+  content: "";
+  display: inline-flex;
+  align-items: flex-end;
+
+  height: 10px;
+}
+
+header button {
+  color: var(--med-gray);
+  border: none;
+  background-color: transparent;
+  margin: 0px 20px;
+}
+header button:last-of-type {
+  border: solid 1px;
+  border-radius: 15px;
+  padding: 5px 20px;
+}
+
+.main-cont {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 30% 30%;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.feature {
+  background-color: var(--almost-white);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+.display {
+  display: none;
+}
+.company {
+  top: 30px;
+  left: 280px;
+}
+.dropped-menu li {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+.dropped-menu img {
+  margin: 10px;
+}
+.main-cont h1 {
+  font-size: 4rem;
+}
+
+.main-cont p {
+  color: var(--med-gray);
+}
+
+.main-cont button {
+  color: var(--almost-white);
+  background-color: var(--almost-black);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.sponsors {
+  display: grid;
+  grid-template-columns: 30% 30% 30% 30%;
+  margin-top: 50px;
+}
+
+li:hover {
+  color: var(--almost-black);
+}
+
+header button:hover {
+  color: var(--almost-black);
+  cursor: pointer;
+}
+.mobile-menu {
+  display: none;
+  z-index: 2;
+}
+
+.main-cont button:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  cursor: pointer;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.icon-menu:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  header button {
+    display: none;
+  }
+  body {
+    text-align: center !important;
+    overflow: hidden;
+  }
+  .main-cont {
+    display: flex;
+    flex-direction: column-reverse;
+
+    margin: auto;
+  }
+
+  .hero-img {
+    content: url(/images/image-hero-mobile.png);
+    width: 80%;
+  }
+  .main-text {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: -100px;
+    max-width: 350px;
+    text-align: center;
+  }
+  .main-text h1 {
+    font-size: 2.5rem;
+    margin: 0px;
+    width: 400px;
+    text-align: center;
+  }
+  .sponsors {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    margin-top: 30px;
+    margin-left: -50px;
+    gap: 50px;
+    padding: 0px 20px 50px;
+  }
+  .main-cont button {
+    margin-top: 30px;
+  }
+  .icon-menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    text-align: left;
+    width: 60%;
+    transition: opacity 2;
+    height: 100vh;
+    background-color: white;
+  }
+  .tar-menu {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .mobile-menu button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+  }
+  .mobile-menu li {
+    margin-left: -10px !important;
+    margin-top: 20px;
+  }
+  .close-menu {
+    margin: 20px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .tar-menu li {
+    display: flex;
+    align-items: center;
+  }
+  .tar-menu li img {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .opt {
+    padding-left: 20px;
+  }
+  .dropped-option {
+    display: none !important;
+  }
+}
